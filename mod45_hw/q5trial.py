@@ -7,7 +7,10 @@ def f(k):
     num = k5 - 5 * k4 + 10 * k3 - 10 * k2 + 5 * k1
     return num / k5
 
-ans = 0
-for k in range(5, 1000):
-    ans += k * (f(k) - f(k - 1))
-print(ans)
+exp = 0
+exp2 = 0
+for k in range(5, 10000):
+    exp += k * (f(k) - f(k - 1))
+    exp2 += k * k * (f(k) - f(k - 1))
+print(exp)
+print(exp2 - exp * exp)
